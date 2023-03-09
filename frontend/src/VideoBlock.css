@@ -1,0 +1,9 @@
+.VideoBlock{
+    display: flex;
+    height: 30vh;
+    width: 80vw;
+    border: 1px solid black;
+    box-sizing: border-box;
+    /* margin-top: 10px; */
+    /* margin:  2vw; */
+}
