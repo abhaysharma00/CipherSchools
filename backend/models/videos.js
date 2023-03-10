@@ -1,19 +1,20 @@
 import mongoose from "mongoose";
 
-const videoSchema = new mongoose.Schema(
-  {
-    url: { type: String, required: [true] },
-    view: { type: Number, default: 0 },
-    likes: { type: Number, default: 0 },
-    dislikes: { type: Number, default: 0 },
-    comment: {
-      type: {
+const videoSchema = new mongoose.Schema({
+  videoid: { type: String, required: [true] },
+  videourl: { type: String, required: [true] },
+  view: { type: Number, default: 0 },
+  likes: { type: Number, default: 0 },
+  dislikes: { type: Number, default: 0 },
+  comments: {
+    type: [
+      {
         name: { type: String },
         text: { type: String },
       },
-    },
-  }
-  //   {timestamps:true}
-);
+    ],
+    default: [{ name: "abhay", text: "fav song" }],
+  },
+});
 
 export default mongoose.model("videos", videoSchema);

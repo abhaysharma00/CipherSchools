@@ -1,9 +1,39 @@
+*{
+  box-sizing: border-box;
+}
+
 .app{
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin: 5px; */
 }
-.videblock{
+.videoplayer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: max-content;
+  border: 1px solid black;
+  padding: 10px;
+}
+.container{
   margin-top: 10px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  align-items: center;
+  justify-items: center;
+}
+.box{
+  /* align-self: center; */
+  align-items: center;
+  justify-items: center;
+  border: 1px solid black;
+  height: 30vh;
+}
+.videoinfo{
+  display: flex;
+}
+.videoinfo > p{
+  margin: 10px;
 }
