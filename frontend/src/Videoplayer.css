@@ -1,0 +1,49 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.videoplayer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: max-content;
+    border: 1px solid black;
+    padding: 10px;
+  }
+.videoinfo{
+    display: flex;
+    justify-content: space-between;
+}
+.videocomments{
+    display: flex;
+}
+  .container{
+    margin-top: 10px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    align-items: center;
+    justify-items: center;
+  }
+  .videoinfo{
+    display: flex;
+  }
+  .videoinfo > p{
+    margin: 10px;
+  }
+form{
+    padding: 5px;
+    flex:1;
+    display: flex;
+}
+form>input{
+    flex: 1;
+    border-radius: 30px ;
+    height:4vh;
+
+}
+form>button{
+    display: none;
+}
