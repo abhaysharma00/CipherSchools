@@ -4,17 +4,15 @@ import Youtube from "react-youtube";
 import { addcomment, addlike, adddislike, addview } from "./utils";
 import "./Videoplayer.css";
 
-function Videoplayer({ show, setshow }) {
+function Videoplayer({ user, show, setshow }) {
   const [input, setInput] = useState("");
-  const [user, setuser] = useState("abhay");
-  // youtube options
-  const opts = {
-    height: "390",
-    width: "640",
+  const [opts, setopts] = useState({
+    height: "350",
+    width: "550",
     playerVars: {
       autoplay: 1,
     },
-  };
+  });
   return (
     <div className="wrapper">
       <div className="videoplayer">
@@ -45,6 +43,7 @@ function Videoplayer({ show, setshow }) {
 
       {/*  */}
       <div className="videocomments">
+        <h3>comments</h3>
         <div className="comment">
           {show.comments.map((c) => (
             <div>
@@ -62,7 +61,15 @@ function Videoplayer({ show, setshow }) {
           />
           <button
             onClick={(e) =>
-              addcomment(e, show._id, show, setshow, input, setInput, user)
+              addcomment(
+                e,
+                show._id,
+                show,
+                setshow,
+                input,
+                setInput,
+                user.displayName
+              )
             }
             type="submit"
           >

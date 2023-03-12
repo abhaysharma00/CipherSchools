@@ -8,6 +8,8 @@ dotenv
 node_modules
 .pnp
 pnp.js
+# firebase.js
+
 
 # testing
 coverage

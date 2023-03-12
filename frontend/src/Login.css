@@ -1,0 +1,26 @@
+.login{
+    /* color:red; */
+    height: 500px;
+    width: 350px;
+    display:grid;
+    place-items: center;
+    border: 2px solid red; 
+    box-shadow: 10px 10px 8px red;
+} 
+.googlelogo{
+    height: 200px;
+    border-radius:100px;
+}
+.loginbutton{
+    height: 40px;
+    margin: 20px;
+    font-size: large;
+    border-radius: 5px;
+}
+.loginbutton:hover{
+    background-color: red;
+    cursor: pointer;
+}
+.googlelogo:hover{
+    cursor: pointer;
+}

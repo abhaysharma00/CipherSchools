@@ -11,6 +11,9 @@ app.use(cors());
 app.use(express.json());
 
 // sample route
+
+// middleware
+// app.use(express.static("../frontend/public/index.html"));
 app.get("/videoplayer", (req, res) => res.send("welcome"));
 app.use("/app", Router);
 

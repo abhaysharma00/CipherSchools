@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./Navbar";
-import Row from "./Row";
 import Videoplayer from "./Videoplayer";
 //
-function App() {
+function App({ user }) {
   const [homedata, sethomedata] = useState([]);
   const [show, setshow] = useState(null);
 
@@ -22,17 +21,27 @@ function App() {
     };
     fetchvideos();
   }, []);
-
   //
-
   return (
     <div className="outerbox">
       <div className="app">
         <Navbar />
         <div className="mid">
-          {show && <Videoplayer show={show} setshow={setshow} />}
+          {show && <Videoplayer user={user} show={show} setshow={setshow} />}
         </div>
-        <Row homedata={homedata} setshow={setshow} />
+        <div className="container">
+          {homedata.map((val) => (
+            // <div className="box" onClick={() => setshow(val)}>
+            <img
+              onClick={() => setshow(val)}
+              className="imageresizing"
+              src={val.videourl}
+              alt=""
+            />
+            // </div>
+          ))}
+        </div>
+        <div className="footer">Copyright @ MOONPLAYER</div>
       </div>
     </div>
   );
